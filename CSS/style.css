@@ -5,12 +5,18 @@
     --default-color: #fff;
 }
 
-/* Typography */
+/* Typography for the font size in rems */
 html {
     font-size: 62.5%;
 }
 
-/* NavBar */
+/* General styles for the layout */
+a {
+    text-decoration: none;
+    color: var(--default-color);
+}
+
+/*Style for the NavBar */
 .NavBar {
     background-color: #ccc;
     display: flex;
@@ -51,7 +57,6 @@ background: linear-gradient(to right, #536976, #292e49);
     font-family: 400;
     font-size: 2.7rem;
     padding: .7rem 8rem;
-    text-decoration: none;
     transition: background-color 0.3s ease-in;
 }
 
@@ -98,7 +103,7 @@ background: linear-gradient(to right, #536976, #292e49);
 }
 
 
-/* Header Logo */
+/* Style for the Header bg-image and its Text */
 .logo-bg {
     position: relative;
     width: 100%;
@@ -108,15 +113,15 @@ background: linear-gradient(to right, #536976, #292e49);
 }
 
 .logo-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url(/image\ 1.jpg);
     background-size: cover;
+    content: '';
     filter: blur(2px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: -1;
 }
 
@@ -137,7 +142,7 @@ background: linear-gradient(to right, #536976, #292e49);
 }
 
 
-/* Icon */
+/* Style for the Icon the script link is the html */
 .icon-section {
     margin-top: 4rem;
 }
@@ -166,3 +171,96 @@ background: linear-gradient(to right, #536976, #292e49);
 .icon {
     font-size: 3.5rem;
 }
+
+
+/* Style for Hotel Room Gallery */
+.room-photos {
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+img {
+    width: 80px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    img {
+        width: 220px;
+        height: 300px;
+    }
+}
+
+
+/* Style for the BG-Section */
+.bg-layout {
+    background-image: url(/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+
+
+.content-bg {
+   
+   background-color: rgba(0, 0, 0, 0.5);
+   color: var(--default-color);
+   filter: blur(1);
+   height: 30vh;
+   left: 0%;
+   position: absolute;
+   transform-origin: top left;
+   transform: skew(-45deg);
+   transform: translate(-50%, -50%);
+   width: 55%; 
+}
+
+.content {
+    position: relative;
+    color: var(--default-color);
+    font-family: "Roboto Condensed", serif;margin-left: 2rem;
+
+    
+}
+
+.content-head {
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 3rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0;   
+}
+
+.content-info {
+    font-size: 1.2rem;
+}
+
+.btn {
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #ed0800;
+    color: var(--default-color);
+    transition: background-color 0.5s ease-in;
+}
+
+.btn:hover {
+    background-color: #33b249;
+    cursor: pointer;
+}
+
+/* @media screen and (max-width: 768px) {
+    .bg-layout, .content-bg {
+        height: 30vh;
+    }
+} */
